@@ -12,6 +12,10 @@ export default {
             },
             backgroundColor: {
                 base: '#faedcd'
+            },
+            fontFamily: {
+                thai: ['"IBM Plex Sans Thai"'],
+                outfit: ['"Outfit"']
             }
         },
     },
