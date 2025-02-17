@@ -17,7 +17,7 @@ function App() {
         <h1 className="text-2xl text-primary text-bold">
           Boondariga & Anuwong
         </h1>
-        <p className="text-primary text-bold">We're getting married</p>
+        <p className="font-normal text-secondary">We're getting married</p>
         <div className="flex justify-center items-center p-8 md:p-0 md:py-4">
           <img
             src={mainImage}
@@ -29,7 +29,7 @@ function App() {
         <Countdown date={date} />
       </div>
       <div className="flex flex-col items-center py-10 aspect-[21/10]">
-        <p className="font-semibold font-thai">สถานที่</p>
+        <p className="font-semibold font-thai">สถานที่จัดงาน</p>
         <p className="text-lg">Starwell Convention Center</p>
         <p className="text-sm font-thai">ศูนย์ประชุมสตาร์เวลล์บาหลี</p>
 
@@ -53,14 +53,14 @@ function App() {
       <div className="w-full aspect-[21/9] flex flex-col items-center py-8 bg-secondary/25 text-gray-700">
         <p className="font-semibold font-thai">รู้จักเจ้าบ่าว - เจ้าสาว</p>
         <div className="flex flex-col gap-x-4 gap-y-8 p-4 px-8 lg:flex-row">
-          <div className="flex flex-col gap-y-2 justify-center items-center p-4 bg-gray-50 rounded-xl font-thai">
+          <div className="flex flex-col gap-y-2 justify-center items-center p-4 bg-gray-50 font-thai">
             <p className="font-bold">เจ้าสาว</p>
             <p>โบว์ - บุณฑริกา ศรีวัฒนพันธุ์</p>
             <div className="overflow-hidden rounded">
               <img src={brideImage} alt="Groom" />
             </div>
           </div>
-          <div className="flex flex-col gap-y-2 justify-center items-center p-4 bg-gray-50 rounded-xl font-thai">
+          <div className="flex flex-col gap-y-2 justify-center items-center p-4 bg-gray-50 font-thai">
             <p className="font-bold">เจ้าบ่าว</p>
             <p>บิล - อนุวงศ์ มงคุดครบุรี</p>
             <div className="overflow-hidden rounded">
