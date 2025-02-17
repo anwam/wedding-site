@@ -17,27 +17,27 @@ const cafeList: Array<LocationDetail> = [
   },
   {
     name: "ครูยอดขนมจีนประโดก",
-    url: "",
+    url: "https://www.facebook.com/Krooyordrestaurant",
   },
   {
     name: "ราดหน้าปิยะ",
-    url: "",
+    url: "https://maps.app.goo.gl/YwKgV6LkCLWbqcpE7",
   },
   {
     name: "ขึ้นชื่อ ก๋วยเตี๋ยวเรือ",
-    url: "",
+    url: "https://maps.app.goo.gl/W2oFnXAuWRj4N4M66",
   },
   {
-    name: "",
-    url: "",
+    name: "8 Dining - Fine dining",
+    url: "https://maps.app.goo.gl/zvJatjtLUajEFVVj7",
   },
   {
-    name: "",
-    url: "",
+    name: "ครัวสุวิมล",
+    url: "https://maps.app.goo.gl/m1EQUrwEMhPpR76o7",
   },
   {
-    name: "",
-    url: "",
+    name: "โกปี๊ฮับ โคราช",
+    url: "https://maps.app.goo.gl/ZRFCL8odebUDVf137",
   },
 ];
 
@@ -48,9 +48,13 @@ function Recommended() {
       <div>
         <h3 className="mb-1 font-bold">โรงแรม</h3>
         <ul>
-          {hotels.map((hotel) => (
-            <li className="list-item gap-x-2">
-              <a href={hotel.url} className="text-blue-400 underline">
+          {hotels.map((hotel, index) => (
+            <li key={`${hotel.name}${index}`} className="list-item gap-x-2">
+              <a
+                target="_blank"
+                href={hotel.url}
+                className="text-blue-400 underline"
+              >
                 <h4>{hotel.name}</h4>
               </a>
             </li>
@@ -60,19 +64,23 @@ function Recommended() {
       <div>
         <h3 className="mb-1 font-bold">ร้านอาหาร & คาเฟ่</h3>
         <ul>
-          {cafeList.map((cafe) => (
-            <li className="flex gap-x-2">
-              <a href={cafe.url}>
+          {cafeList.map((cafe, index) => (
+            <li key={`${cafe.name}${index}`} className="flex gap-x-2">
+              <a
+                target="_blank"
+                href={cafe.url}
+                className="text-blue-400 underline"
+              >
                 <h4>{cafe.name}</h4>
               </a>
             </li>
           ))}
         </ul>
       </div>
-      <div>
+      {/* <div>
         <h3 className="mb-1 font-bold">พักผ่อน & Entertainment</h3>
         <p>WIP</p>
-      </div>
+      </div> */}
     </div>
   );
 }
