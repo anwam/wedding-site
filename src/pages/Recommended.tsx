@@ -39,6 +39,14 @@ const cafeList: Array<LocationDetail> = [
     name: "โกปี๊ฮับ โคราช",
     url: "https://maps.app.goo.gl/ZRFCL8odebUDVf137",
   },
+  {
+    name: "ยูโทเปีย Bar B Q",
+    url: "https://maps.app.goo.gl/wWyyixDwHUG1LvT17",
+  },
+  {
+    name: "มีแฮง",
+    url: "https://maps.app.goo.gl/DQkufxLyrci3tRc99",
+  },
 ];
 
 function Recommended() {
