@@ -81,15 +81,6 @@ function Recommended() {
   return (
     <div className="flex flex-col gap-y-4 p-4 lg:p-0 font-thai">
       <h2 className="mt-4 font-semibold">แนะนำสถานที่</h2>
-      <h3 className="text-xl font-bold">Special Thanks</h3>
-      <a
-        target="_blank"
-        href="https://maps.app.goo.gl/E91MnMumCZ486mHb7"
-        className="font-bold text-blue-400 underline"
-      >
-        ร้านมวลสารความอร่อย จ. ขอนแก่น
-      </a>
-      <hr />
       <div>
         <h3 className="mb-1 font-bold">โรงแรม</h3>
         <ul className="">
@@ -122,6 +113,15 @@ function Recommended() {
           ))}
         </ul>
       </div>
+      <hr />
+      <h3 className="text-xl font-bold">Our Picks</h3>
+      <a
+        target="_blank"
+        href="https://maps.app.goo.gl/E91MnMumCZ486mHb7"
+        className="font-bold text-blue-400 underline"
+      >
+        ร้านมวลสารความอร่อย จ. ขอนแก่น
+      </a>
       {/* <div>
         <h3 className="mb-1 font-bold">พักผ่อน & Entertainment</h3>
         <p>WIP</p>
