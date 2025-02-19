@@ -13,22 +13,23 @@ export default function Countdown({ date }: Props) {
           return "Happy Wedding Day!";
         }
         return (
-          <div className="flex gap-x-2 items-center">
-            <span className="flex flex-row justify-center items-center px-2 py-1 rounded shadow-lg min-w-8">
-              {days}
-            </span>
-            :
-            <span className="flex flex-row justify-center items-center px-2 py-1 rounded shadow-lg min-w-8">
-              {hours}
-            </span>
-            :
-            <span className="flex flex-row justify-center items-center px-2 py-1 rounded shadow-lg min-w-8">
-              {minutes}
-            </span>
-            :
-            <span className="flex flex-row justify-center items-center px-2 py-1 rounded shadow-lg min-w-8">
-              {seconds}
-            </span>
+          <div className="flex gap-x-2 items-center md:gap-x-12">
+            <p className="flex flex-col gap-y-2 justify-center items-center min-w-8">
+              <span className="text-4xl">{days}</span>
+              <span className="text-xs">DAYS</span>
+            </p>
+            <p className="flex flex-col gap-y-2 justify-center items-center min-w-8">
+              <span className="text-4xl">{hours}</span>
+              <span className="text-xs">HOURS</span>
+            </p>
+            <p className="flex flex-col gap-y-2 justify-center items-center min-w-8">
+              <span className="text-4xl">{minutes}</span>
+              <span className="text-xs">MINUTES</span>
+            </p>
+            <p className="flex flex-col gap-y-2 justify-center items-center min-w-8">
+              <span className="text-4xl">{seconds}</span>
+              <span className="text-xs">SECONDS</span>
+            </p>
           </div>
         );
       }}

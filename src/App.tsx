@@ -14,27 +14,29 @@ function App() {
   return (
     <div className="flex flex-col flex-1 gap-y-4 justify-center items-center">
       <div className="flex flex-col items-center w-full aspect-[21/5] justify-center py-8">
-        <h1 className="text-2xl text-primary text-bold">
+        <h1 className="font-serif text-3xl text-primary text-bold">
           Boondariga & Anuwong
         </h1>
-        <p className="font-normal text-secondary">We're getting married</p>
-        <div className="flex justify-center items-center p-8 md:p-0 md:py-4">
+        <p className="font-normal text-gray-500">We're getting married</p>
+        <div className="flex justify-center items-center p-8 md:p-0 md:mt-4 md:py-4">
           <img
             src={mainImage}
             alt=""
             className="w-full rounded-2xl md:w-1/2 md:max-w-xl lg:max-w-2xl"
           />
         </div>
-        <p className="mt-12 mb-4 text-3xl text-secondary">15 March 2025</p>
+        <p className="mt-12 mb-4 text-3xl font-bold tracking-wider md:mb-6 text-secondary">
+          15 MARCH 2025
+        </p>
         <Countdown date={date} />
       </div>
-      <div className="flex flex-col items-center py-10 aspect-[21/10]">
+      <div className="flex flex-col items-center py-10 w-full text-white bg-primary">
         <p className="font-semibold font-thai">สถานที่จัดงาน</p>
-        <p className="text-lg">Starwell Convention Center</p>
-        <p className="text-sm font-thai">ศูนย์ประชุมสตาร์เวลล์บาหลี</p>
+        <p className="text-xl">Starwell Convention Center</p>
+        <p className="mb-4 text-sm font-thai">ศูนย์ประชุมสตาร์เวลล์บาหลี</p>
 
         <button
-          className="px-2 py-1 mt-2 text-sm text-white rounded bg-secondary font-thai"
+          className="px-2 py-1 mt-2 text-sm font-bold bg-white rounded shadow text-primary font-thai"
           onClick={toggleMap}
         >
           ดูแผนที่
@@ -50,23 +52,22 @@ function App() {
           </div>
         )}
       </div>
-      <div className="w-full aspect-[21/9] flex flex-col items-center py-8 bg-secondary/25 text-gray-700">
-        <p className="font-semibold font-thai">รู้จักเจ้าบ่าว - เจ้าสาว</p>
-        <div className="flex flex-col gap-x-4 gap-y-8 p-4 px-8 lg:flex-row">
-          <div className="flex flex-col gap-y-2 justify-center items-center p-4 bg-gray-50 font-thai">
-            <p className="font-bold">เจ้าสาว</p>
-            <p>โบว์ - บุณฑริกา ศรีวัฒนพันธุ์</p>
-            <div className="overflow-hidden rounded">
-              <img src={brideImage} alt="Groom" />
-            </div>
+      <div className="flex flex-col gap-x-4 gap-y-8 md:flex-row">
+        <div className="flex flex-col gap-y-2 justify-center items-center p-4 font-thai">
+          <p className="">เจ้าสาว</p>
+          <div className="overflow-hidden rounded-full aspect-square">
+            <img src={brideImage} alt="Groom" />
           </div>
-          <div className="flex flex-col gap-y-2 justify-center items-center p-4 bg-gray-50 font-thai">
-            <p className="font-bold">เจ้าบ่าว</p>
-            <p>บิล - อนุวงศ์ มงคุดครบุรี</p>
-            <div className="overflow-hidden rounded">
-              <img src={groomImage} alt="Groom" />
-            </div>
+          <p className="mt-4 text-xl font-bold">โบว์</p>
+          <p>บุณฑริกา ศรีวัฒนพันธุ์</p>
+        </div>
+        <div className="flex flex-col gap-y-2 justify-center items-center p-4 font-thai">
+          <p className="">เจ้าบ่าว</p>
+          <div className="overflow-hidden rounded-full aspect-square">
+            <img src={groomImage} alt="Groom" />
           </div>
+          <p className="mt-4 text-xl font-bold">บิล</p>
+          <p>อนุวงศ์ มงคุดครบุรี</p>
         </div>
       </div>
       <div className="flex flex-col gap-y-2 items-center px-2 py-10">

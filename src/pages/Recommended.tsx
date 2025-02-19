@@ -3,17 +3,45 @@ type LocationDetail = {
   url?: string;
 };
 const hotels: Array<LocationDetail> = [
-  { name: "Starwell Bali Resort" },
-  { name: "Centara Korat" },
-  { name: "Koranaree Courtyard Boutique Hotel" },
-  { name: "Kantary Hotel Korat" },
-  { name: "Centre Point Hotel Terminal21 Korat" },
+  {
+    name: "Starwell Bali Resort",
+    url: "https://maps.app.goo.gl/XVq6CNKkAgUAMixC8",
+  },
+  { name: "Centara Korat", url: "https://maps.app.goo.gl/wPLA381RHB1RVcc19" },
+  {
+    name: "Koranaree Courtyard Boutique Hotel",
+    url: "https://maps.app.goo.gl/fz6r2muiXtpUddJb9",
+  },
+  {
+    name: "Kantary Hotel Korat",
+    url: "https://maps.app.goo.gl/QuAUphBEZPVcNXDK7",
+  },
+  {
+    name: "Centre Point Hotel Terminal21 Korat",
+    url: "https://maps.app.goo.gl/gP1X51o9uUawaS1v6",
+  },
+  {
+    name: "Hop Inn Korat",
+    url: "https://maps.app.goo.gl/dcNdpqCSj4MjSJxa6",
+  },
+  {
+    name: "B2 Korat Premium Hotel",
+    url: "https://maps.app.goo.gl/98N2ya8QA4gYpasy9",
+  },
+  {
+    name: "KIO Hotel Korat",
+    url: "https://maps.app.goo.gl/Qa1y2CLKdkrVUV1EA",
+  },
 ];
 
 const cafeList: Array<LocationDetail> = [
   {
     name: "PHASE",
     url: "https://www.facebook.com/Phasetheofficial",
+  },
+  {
+    name: "S-Curve Specialty Coffee",
+    url: "https://maps.app.goo.gl/AiH9tukN6gox5tsb7",
   },
   {
     name: "ครูยอดขนมจีนประโดก",
@@ -52,10 +80,19 @@ const cafeList: Array<LocationDetail> = [
 function Recommended() {
   return (
     <div className="flex flex-col gap-y-4 p-4 lg:p-0 font-thai">
-      <h2 className="font-semibold">แนะนำสถานที่</h2>
+      <h2 className="mt-4 font-semibold">แนะนำสถานที่</h2>
+      <h3 className="text-xl font-bold">Special Thanks</h3>
+      <a
+        target="_blank"
+        href="https://maps.app.goo.gl/E91MnMumCZ486mHb7"
+        className="font-bold text-blue-400 underline"
+      >
+        ร้านมวลสารความอร่อย จ. ขอนแก่น
+      </a>
+      <hr />
       <div>
         <h3 className="mb-1 font-bold">โรงแรม</h3>
-        <ul>
+        <ul className="">
           {hotels.map((hotel, index) => (
             <li key={`${hotel.name}${index}`} className="list-item gap-x-2">
               <a

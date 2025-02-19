@@ -33,7 +33,7 @@ function Layout() {
           ))}
         </div>
       </nav>
-      <div className="container flex flex-col mx-auto max-w-2xl min-h-dvh">
+      <div className="container flex flex-col mx-auto max-w-4xl min-h-dvh">
         <Outlet />
       </div>
     </div>
