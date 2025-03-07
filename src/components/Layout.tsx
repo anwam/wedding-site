@@ -7,6 +7,10 @@ const links = [
     text: "หน้าแรก",
   },
   {
+    url: "/gift",
+    text: "ให้ของขวัญพวกเรา",
+  },
+  {
     url: "/recommended",
     text: "สถานที่แนะนำ",
   },
@@ -16,7 +20,7 @@ function Layout() {
   return (
     <div>
       <nav className="p-4 text-primary [&_a]:border [&_a]:border-primary [&_a]:rounded [&_a]:px-2 border-b border-primary font-thai font-bold text-sm">
-        <div className="container flex flex-row gap-x-2 mx-auto max-w-2xl">
+        <div className="container flex flex-row max-w-4xl mx-auto gap-x-2">
           {links.map((link, index) => (
             <NavLink
               viewTransition
@@ -33,7 +37,7 @@ function Layout() {
           ))}
         </div>
       </nav>
-      <div className="container flex flex-col mx-auto max-w-4xl min-h-dvh">
+      <div className="container flex flex-col max-w-4xl mx-auto min-h-dvh">
         <Outlet />
       </div>
     </div>

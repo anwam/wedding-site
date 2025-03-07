@@ -1,9 +1,11 @@
-import Countdown from "./components/Countdown";
-import mainImage from "./assets/gallery/main.jpg";
-import groomImage from "./assets/gallery/groom.jpg";
-import brideImage from "./assets/gallery/bride.jpg";
 import { useState } from "react";
-import Gallery from "./components/Gallery";
+
+import Countdown from "@/components/Countdown";
+import mainImage from "@/assets/gallery/main.jpg";
+import groomImage from "@/assets/gallery/groom.jpg";
+import brideImage from "@/assets/gallery/bride.jpg";
+import invitationCard from "@/assets/gallery/invitation-card@2x.jpg";
+import Gallery from "@/components/Gallery";
 
 function App() {
   const date = new Date("2025-03-15T00:00:00Z");
@@ -12,17 +14,17 @@ function App() {
     setShowMap(!showMap);
   };
   return (
-    <div className="flex flex-col flex-1 gap-y-4 justify-center items-center">
+    <div className="flex flex-col items-center justify-center flex-1 gap-y-4">
       <div className="flex flex-col items-center w-full aspect-[21/5] justify-center py-8">
         <h1 className="font-serif text-3xl text-primary text-bold">
           Boondariga & Anuwong
         </h1>
         <p className="font-normal text-gray-500">We're getting married</p>
-        <div className="flex justify-center items-center p-8 md:p-0 md:mt-4 md:py-4">
+        <div className="flex items-center justify-center p-8 md:p-0 md:mt-4 md:py-4">
           <img
             src={mainImage}
             alt=""
-            className="w-full rounded-2xl md:w-1/2 md:max-w-xl lg:max-w-2xl"
+            className="w-full rounded-2xl md:w-1/2 md:max-w-xl lg:max-w-4xl"
           />
         </div>
         <p className="mt-12 mb-4 text-3xl font-bold tracking-wider md:mb-6 text-secondary">
@@ -30,7 +32,7 @@ function App() {
         </p>
         <Countdown date={date} />
       </div>
-      <div className="flex flex-col items-center py-10 w-full text-white bg-primary">
+      <div className="flex flex-col items-center w-full py-10 text-white bg-primary">
         <p className="font-semibold font-thai">สถานที่จัดงาน</p>
         <p className="text-xl">Starwell Convention Center</p>
         <p className="mb-4 text-sm font-thai">ศูนย์ประชุมสตาร์เวลล์บาหลี</p>
@@ -52,8 +54,16 @@ function App() {
           </div>
         )}
       </div>
+      <div className="flex flex-col items-center p-4 gap-y-2">
+        <p className="font-bold font-thai">กำหนดการณ์</p>
+        <img
+          src={invitationCard}
+          alt="time-table"
+          className="w-full md:max-w-xl lg:max-w-2xl"
+        />
+      </div>
       <div className="flex flex-col gap-x-4 gap-y-8 md:flex-row">
-        <div className="flex flex-col gap-y-2 justify-center items-center p-4 font-thai">
+        <div className="flex flex-col items-center justify-center p-4 gap-y-2 font-thai">
           <p className="">เจ้าสาว</p>
           <div className="overflow-hidden rounded-full aspect-square">
             <img src={brideImage} alt="Groom" />
@@ -61,7 +71,7 @@ function App() {
           <p className="mt-4 text-xl font-bold">โบว์</p>
           <p>บุณฑริกา ศรีวัฒนพันธุ์</p>
         </div>
-        <div className="flex flex-col gap-y-2 justify-center items-center p-4 font-thai">
+        <div className="flex flex-col items-center justify-center p-4 gap-y-2 font-thai">
           <p className="">เจ้าบ่าว</p>
           <div className="overflow-hidden rounded-full aspect-square">
             <img src={groomImage} alt="Groom" />
@@ -70,7 +80,7 @@ function App() {
           <p>อนุวงศ์ มงคุดครบุรี</p>
         </div>
       </div>
-      <div className="flex flex-col gap-y-2 items-center px-2 py-10">
+      <div className="flex flex-col items-center px-2 py-10 gap-y-2">
         <p className="mb-4 text-xl font-semibold text-primary">Gallery</p>
         <Gallery />
       </div>

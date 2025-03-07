@@ -1,11 +1,20 @@
 type LocationDetail = {
   name: string;
   url?: string;
+  recommended?: boolean;
 };
 const hotels: Array<LocationDetail> = [
   {
     name: "Starwell Bali Resort",
     url: "https://maps.app.goo.gl/XVq6CNKkAgUAMixC8",
+  },
+  {
+    name: "B2 Korat Premium Hotel",
+    url: "https://maps.app.goo.gl/98N2ya8QA4gYpasy9",
+  },
+  {
+    name: "KIO Hotel Korat",
+    url: "https://maps.app.goo.gl/Qa1y2CLKdkrVUV1EA",
   },
   { name: "Centara Korat", url: "https://maps.app.goo.gl/wPLA381RHB1RVcc19" },
   {
@@ -23,14 +32,6 @@ const hotels: Array<LocationDetail> = [
   {
     name: "Hop Inn Korat",
     url: "https://maps.app.goo.gl/dcNdpqCSj4MjSJxa6",
-  },
-  {
-    name: "B2 Korat Premium Hotel",
-    url: "https://maps.app.goo.gl/98N2ya8QA4gYpasy9",
-  },
-  {
-    name: "KIO Hotel Korat",
-    url: "https://maps.app.goo.gl/Qa1y2CLKdkrVUV1EA",
   },
 ];
 
@@ -79,13 +80,16 @@ const cafeList: Array<LocationDetail> = [
 
 function Recommended() {
   return (
-    <div className="flex flex-col gap-y-4 p-4 lg:p-0 font-thai">
-      <h2 className="mt-4 font-semibold">แนะนำสถานที่</h2>
-      <div>
+    <div className="p-4 lg:p-0 font-thai">
+      <h2 className="mt-4 mb-4 text-3xl font-semibold">สถานที่แนะนำ</h2>
+      <div className="flex flex-col mb-4">
         <h3 className="mb-1 font-bold">โรงแรม</h3>
         <ul className="">
           {hotels.map((hotel, index) => (
-            <li key={`${hotel.name}${index}`} className="list-item gap-x-2">
+            <li
+              key={`${hotel.name}${index}`}
+              className="list-item gap-x-2 w-fit"
+            >
               <a
                 target="_blank"
                 href={hotel.url}
@@ -97,11 +101,14 @@ function Recommended() {
           ))}
         </ul>
       </div>
-      <div>
+      <div className="mb-4">
         <h3 className="mb-1 font-bold">ร้านอาหาร & คาเฟ่</h3>
         <ul>
           {cafeList.map((cafe, index) => (
-            <li key={`${cafe.name}${index}`} className="flex gap-x-2">
+            <li
+              key={`${cafe.name}${index}`}
+              className="list-item gap-x-2 w-fit"
+            >
               <a
                 target="_blank"
                 href={cafe.url}
@@ -113,7 +120,7 @@ function Recommended() {
           ))}
         </ul>
       </div>
-      <hr />
+      <hr className="my-4" />
       <h3 className="text-xl font-bold">Our Picks</h3>
       <a
         target="_blank"
