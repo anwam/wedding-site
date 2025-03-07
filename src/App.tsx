@@ -20,25 +20,25 @@ function App() {
           Boondariga & Anuwong
         </h1>
         <p className="font-normal text-gray-500">We're getting married</p>
-        <div className="flex items-center justify-center p-8 md:p-0 md:mt-4 md:py-4">
+        <div className="flex items-center justify-center p-4 md:p-0 md:mt-4 md:py-4">
           <img
             src={mainImage}
             alt=""
             className="w-full rounded-2xl md:w-1/2 md:max-w-xl lg:max-w-4xl"
           />
         </div>
-        <p className="mt-12 mb-4 text-3xl font-bold tracking-wider md:mb-6 text-secondary">
+        <p className="mb-4 text-3xl font-bold tracking-wider md:mb-6 text-secondary">
           15 MARCH 2025
         </p>
         <Countdown date={date} />
       </div>
       <div className="flex flex-col items-center w-full py-10 text-white bg-primary">
         <p className="font-semibold font-thai">สถานที่จัดงาน</p>
-        <p className="text-xl">Starwell Convention Center</p>
-        <p className="mb-4 text-sm font-thai">ศูนย์ประชุมสตาร์เวลล์บาหลี</p>
+        <p className="text-xl">Starwell Bali Resort</p>
+        <p className="mb-4 text-sm font-thai">โรงแรมสตาร์เวลบาหลีรีสอร์ท</p>
 
         <button
-          className="px-2 py-1 mt-2 text-sm font-bold bg-white rounded shadow text-primary font-thai"
+          className="px-2 py-1 text-sm font-bold bg-white rounded shadow text-primary font-thai"
           onClick={toggleMap}
         >
           ดูแผนที่
@@ -55,7 +55,7 @@ function App() {
         )}
       </div>
       <div className="flex flex-col items-center p-4 gap-y-2">
-        <p className="font-bold font-thai">กำหนดการณ์</p>
+        <p className="font-bold font-thai">กำหนดการ</p>
         <img
           src={invitationCard}
           alt="time-table"
