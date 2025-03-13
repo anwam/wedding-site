@@ -99,28 +99,29 @@ const imageList: Array<
   ],
   [
     {
-      image: dancingBeach,
-      landscape: false,
-      flexAuto: true,
+      image: sweet,
+      landscape: true,
     },
     {
       image: dancingBeach2,
-      landscape: false,
-      shrink: true,
+      landscape: true,
     },
   ],
   [
     {
-      image: sweet,
-      landscape: false,
+      image: dancingBeach,
+      landscape: true,
+      full: true,
     },
+  ],
+  [
     {
       image: lookBack,
-      landscape: false,
+      landscape: true,
     },
     {
       image: veil,
-      landscape: false,
+      landscape: true,
     },
   ],
 ];
