@@ -1,10 +1,10 @@
-import QRCode from "@/assets/gallery/qr-code.jpg";
+import QRCode from "@/assets/images/gallery/qr-code.jpg";
 
 function GiftPage() {
   return (
     <div className="p-4 font-thai">
       <h1 className="font-semibold">ให้ของขวัญเรา</h1>
-      <p className="max-w-xl mb-4 text-xl">
+      <p className="mb-4 max-w-xl text-xl">
         สำหรับท่านที่ไม่สะดวกมาร่วมงาน แต่อยากมอบของขวัญให้บ่าว-สาว
         สามารถส่งของขวัญได้ผ่านทางเลขบัญชีหรือ QR Code ด้านล่างนี้
       </p>
@@ -22,7 +22,7 @@ function GiftPage() {
       </p>
 
       <hr className="my-4" />
-      <img src={QRCode} alt="qr-code" className="w-4/5 mx-auto" />
+      <img src={QRCode} alt="qr-code" className="mx-auto w-4/5" />
     </div>
   );
 }
